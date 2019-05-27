@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.SleepTimePreferenceActivity">
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:text=""
+              android:id="@+id/sleepStartTV"/>
+
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="set start"
+            android:layout_below="@id/sleepStartTV"
+            android:id="@+id/setStartBtn"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:layout_marginTop="20dp"
+              android:text=""
+              android:layout_below="@id/setStartBtn"
+              android:id="@+id/sleepEndTV"/>
+
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="set end"
+            android:layout_below="@id/sleepEndTV"
+            android:id="@+id/setEndBtn"/>
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:id="@+id/saveBtn"
+            android:text="save"
+            android:layout_below="@id/setEndBtn"/>
+</RelativeLayout>

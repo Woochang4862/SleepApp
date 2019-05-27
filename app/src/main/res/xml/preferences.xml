@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+android:title="@string/preferences_title">
+    <Preference
+        android:title="@string/preferences_sleep_time_title"
+        android:key="@string/key_sleep_time"/>
+    <ListPreference
+            android:title="@string/preferences_duration_of_ringtone_title"
+            android:key="@string/key_duration_of_ringtone"
+            android:defaultValue="@string/preferences_default_duration"
+            android:summary="%s"
+            android:entries="@array/duration_of_ringtone"
+            android:entryValues="@array/duration_of_ringtone"/>
+    <Preference
+            android:key="@string/key_ringtone_filename"
+            android:title="@string/preferences_ringtone_title"
+            android:defaultValue="@string/preferences_default_ringtone_name">
+    </Preference>
+</PreferenceScreen>

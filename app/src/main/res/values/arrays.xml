@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="duration_of_ringtone">
+        <item>한번</item>
+        <item>20초</item>
+        <item>40초</item>
+        <item>60초</item>
+        <item>80초</item>
+        <item>100초</item>
+    </string-array>
+
+    <string-array name="dismiss_button_names_array">
+        <item>Dismiss</item>
+        <item>OK</item>
+        <item>Just 5 minutes more!</item>
+        <item>That\'s it!</item>
+        <item>I\'m already awake</item>
+        <item>Shut up</item>
+        <item>Close</item>
+        <item>No thanks</item>
+        <item>Let me sleep</item>
+        <item>Go away</item>
+        <item>Good morning!</item>
+    </string-array>
+</resources>
