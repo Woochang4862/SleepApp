@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/action_timer"
+          android:title="Timer"
+          android:icon="@drawable/ic_timer"/>
+    <item android:id="@+id/action_ASMR"
+          android:title="ASMR"
+          android:icon="@drawable/ic_asmr" />
+    <item android:id="@+id/action_work_out"
+          android:title="Work Out"
+          android:icon="@drawable/ic_work_out" />
+    <item android:id="@+id/action_todo"
+          android:title="Todo"
+          android:icon="@drawable/ic_todo" />
+    <item android:id="@+id/action_info"
+          android:title="Info"
+          android:icon="@drawable/ic_info" />
+</menu>

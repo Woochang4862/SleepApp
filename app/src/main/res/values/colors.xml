@@ -1,12 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#CECECE</color>
+    <color name="colorAccent">#ff9090</color>
     <color name="launcher_icon">#f73f38</color>
     <color name="dismiss_activity_textcolor">#ffffff</color>
     <color name="dismiss_activity_background">#000000</color>
     <color name="main_textcolor">#777777</color>
     <color name="main_background">#ffffff</color>
     <color name="main_disabled_textcolor">#aaaaaa</color>
+    <color name="todo_primary_color">#826aff</color>
+    <color name="todo_primary_dark_color">#4D3FA5</color>
+    <color name="default_background_color">#FAFAFA</color>
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="dark">#181d20</color>
+    <color name="blue">#0028dc</color>
+
+    <color name="slate">#505a69</color>
+    <color name="almost_black">#0d1010</color>
+
+    <color name="dayPressed">#4D3FA5</color>
+    <color name="daySelected">#614BDA</color>
+    <color name="dayDeselected">#505a69</color>
+    <color name="navSelected">#4168d6</color>
+    <color name="success_color">#00cd00</color>
+    <color name="failed_color">#ff002a</color>
+    <color name="edit_work_out_delete_color">#ff0001</color>
+    <color name="work_out_back_ground_color_1">#87d7ca</color>
+    <color name="work_out_back_ground_color_2">#ffb82c</color>
+    <color name="work_out_back_ground_color_3">#eb4985</color>
+    <color name="work_out_back_ground_color_4">#43c5f6</color>
+    <color name="work_out_back_ground_color_5">#ff9750</color>
+    <color name="colorStart">#009fff</color>
+    <color name="colorEnd">#ec2f4b</color>
 </resources>

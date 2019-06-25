@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40.3dp">
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/day"
+            android:textSize="12sp"
+            android:textColor="#494949"
+            android:text="9일 월"
+    />
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:id="@+id/isSuccess"
+            android:textColor="@color/success_color"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="46.7dp"
+            android:text="SUCCESS"
+    />
+</RelativeLayout>

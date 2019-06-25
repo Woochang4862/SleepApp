@@ -22,4 +22,9 @@
         <item>Go away</item>
         <item>Good morning!</item>
     </string-array>
+
+    <array name="gradient1">
+        <item>@color/colorStart</item>
+        <item>@color/colorEnd</item>
+    </array>
 </resources>

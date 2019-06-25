@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:background="@drawable/bg_add_work_out"
+                android:layout_height="match_parent">
+
+<ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_arrow_back" android:id="@+id/backBtn" android:layout_margin="16dp"
+           android:contentDescription="backBtn"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:id="@+id/title"
+            android:layout_marginBottom="66.3dp"
+            android:layout_marginTop="74dp"
+            android:layout_marginLeft="61dp"
+            android:text="운동 이름 설정"/>
+
+
+    <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/workOutName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:inputType="text"
+            android:textStyle="bold"
+            android:scrollHorizontally="true"
+            android:layout_below="@id/title"
+            android:layout_alignLeft="@id/title"
+            android:hint="운동 이름"
+            android:ellipsize="end"
+            android:layout_marginBottom="46.3dp"
+            android:textColor="#252525"
+            android:layout_marginTop="2dp"
+            android:textSize="22.7sp"
+            android:drawablePadding="10dp"
+            android:background="@null"
+            android:text="공원에서 조깅하기"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="128.3dp"
+            android:textColor="#000000"
+            android:id="@+id/next"
+            android:layout_below="@id/workOutName"
+            android:text="다음"/>
+</RelativeLayout>

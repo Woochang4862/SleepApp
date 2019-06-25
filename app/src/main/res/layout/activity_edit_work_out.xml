@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.EditWorkOutActivity">
+
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                   android:src="@drawable/ic_arrow_back"
+                   android:background="?attr/selectableItemBackgroundBorderless"
+                   android:layout_marginTop="24dp"
+                   android:id="@+id/backBtn"
+                   android:layout_alignParentLeft="true"
+                   android:layout_marginLeft="25.3dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:background="?attr/selectableItemBackgroundBorderless"
+                  android:layout_marginTop="24dp"
+                  android:id="@+id/doneBtn"
+                  android:textSize="12sp"
+                  android:textStyle="bold"
+                  android:text="완료"
+                  android:textColor="#434343"
+                  android:visibility="gone"
+                  android:layout_alignParentLeft="true"
+                  android:layout_marginLeft="25.3dp"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="#434343"
+                android:text="수정"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:id="@+id/editBtn"
+                android:textStyle="bold"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="28.7dp"
+                android:layout_marginRight="24.7dp"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="#ff0001"
+                android:text="삭제"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:id="@+id/deleteBtn"
+                android:visibility="gone"
+                android:textStyle="bold"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="28.7dp"
+                android:layout_marginRight="24.7dp"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22.2sp"
+                android:textColor="#333333"
+                android:textStyle="bold"
+                android:layout_marginLeft="48.3dp"
+                android:layout_marginTop="79.7dp"
+                android:layout_marginBottom="62.7dp"
+                android:id="@+id/title"
+                android:text="운동 리스트"/>
+
+        <androidx.recyclerview.widget.RecyclerView android:layout_width="wrap_content"
+                                                   android:id="@+id/workOutList"
+                                                   android:layout_marginLeft="46.3dp"
+                                                   android:layout_below="@id/title"
+                                                   android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+</ScrollView>

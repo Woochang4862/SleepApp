@@ -3,10 +3,12 @@ package com.jeongwoochang.sleepapp.util.helper;
 import android.content.Context;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
+import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.CountDownTimer;
 import android.util.Log;
 import com.jeongwoochang.sleepapp.util.helper.data.SharedPreferencesHelper;
+import timber.log.Timber;
 
 import java.io.File;
 import java.io.IOException;
@@ -27,7 +29,7 @@ public class RingtonePlayer {
     private AudioManager audioManager;
     private int initialRingerMode;
     private CountDownTimer countDownTimer;
-    private int durationSeconds;
+    private int durationSeconds = 60;
     private final String LOG_TAG = RingtonePlayer.class.getSimpleName();
     private OnFinishListener onFinishListener;
     private boolean isReleased = false;
@@ -42,7 +44,7 @@ public class RingtonePlayer {
         Log.d(LOG_TAG, "Playing started");
         setNormalRingerMode();
 
-        durationSeconds = sharPrefHelper.getDurationInt();
+        //durationSeconds = sharPrefHelper.getDurationOfRingtoneInt();
 
         mediaPlayer = new MediaPlayer();
         mediaPlayer.setAudioStreamType(AudioManager.STREAM_ALARM);
@@ -99,7 +101,7 @@ public class RingtonePlayer {
 
 
     private void startCountDownTimer(int durationSec) {
-        countDownTimer = new CountDownTimer(durationSec*1000, durationSec*1000) {
+        countDownTimer = new CountDownTimer(durationSec*10000, 1*1000) {
 
             @Override
             public void onTick(long millisUntilFinished) {
@@ -120,7 +122,7 @@ public class RingtonePlayer {
     }
 
     private Uri getRingtone() {
-        String filename = sharPrefHelper.getRingtoneFileName();
+        String filename = "";
         if (filename.equals("")) {   // if ringtone not chosen yet
             return getDefaultRingtone();
         } else {
@@ -131,7 +133,11 @@ public class RingtonePlayer {
     }
 
     private Uri getDefaultRingtone() {
-        return sharPrefHelper.getDefaultRingtoneUri();
+        Uri defaultRingtoneUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM);
+        if (defaultRingtoneUri == null) {
+            defaultRingtoneUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+        }
+        return defaultRingtoneUri;
     }
 
 

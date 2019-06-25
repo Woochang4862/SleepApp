@@ -2,16 +2,16 @@
 <resources xmlns:tools="http://schemas.android.com/tools"
     tools:ignore="MissingTranslation">
 
-    <item name="key_first_alarm_hour" type="string">first_alarm_hour</item>
-    <item name="key_first_alarm_minute" type="string">first_alarm_minute</item>
-    <item name="key_switch_state" type="string">switch_state</item>
-    <item name="key_interval" type="string">interval</item>
-    <item name="key_number_of_alarms" type="string">number_of_alarms</item>
-    <item name="key_sleep_time" type="string">sleep_time</item>
-    <item name="key_duration_of_ringtone" type="string">duration_of_ringtone</item>
+    <item name="key_fast_timer" type="string">fast_timer</item>
+    <item name="key_nap_timer" type="string">nap_timer</item>
+    <item name="cookies" type="string">cookies</item>
+    <item name="key_email" type="string">email</item>
+    <item name="key_pw" type="string">pw</item>
+    <item name="key_auto_login" type="string">auto_login</item>
+    <item name="key_logout" type="string">logout</item>
+    <!--뮤직 플레이어 정보-->
+    <item name="key_music_player" type="string">music_player</item>
+
+    <!--etc-->
     <item name="key_installation_date" type="string">installation_date</item>
-    <item name="key_sleep_start_time" type="string">sleep_start_time</item>
-    <item name="key_sleep_end_time" type="string">sleep_end_time</item>
-    <item name="key_number_of_already_rang_alarms" type="string">number_of_already_rang_alarms</item>
-    <item name="key_ringtone_filename" type="string">ringtone_filename</item>
 </resources>

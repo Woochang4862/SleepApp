@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.AddTODOActivity">
+
+    <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent"
+                                                           android:id="@+id/nameArea"
+                                                           android:layout_height="wrap_content">
+        <EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/name"
+                  android:hint="할 일"
+                  android:textSize="30dp"
+                  android:background="@null"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <DatePicker android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:elevation="20dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/datePicker"
+                android:layout_below="@id/nameArea"/>
+
+    <Button android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="저장"
+            android:backgroundTint="#826aff"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/white"
+            android:id="@+id/saveBtn"/>
+
+</RelativeLayout>

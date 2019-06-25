@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            app:startDestination="@id/fragmentWorkOutName">
+
+    <fragment
+            android:id="@+id/fragmentWorkOutName"
+            android:name="com.jeongwoochang.sleepapp.fragment.WorkOutNameFragment"
+            android:label="Fragment Work Out Name"
+            tools:layout="@layout/fragment_work_out_name">
+        <action
+                android:id="@+id/fragmentWorkOutNameToFrequency"
+                app:destination="@id/fragmentWorkOutFrequency"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+            android:id="@+id/fragmentWorkOutFrequency"
+            android:name="com.jeongwoochang.sleepapp.fragment.WorkOutFrequencyFragment"
+            android:label="Fragment Work Out Frequency"
+            tools:layout="@layout/fragment_work_out_frequency">
+        <action
+                android:id="@+id/fragmentWorkOutFrequencyToTime"
+                app:destination="@id/fragmentWorkOutTime"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+            android:id="@+id/fragmentWorkOutTime"
+            android:name="com.jeongwoochang.sleepapp.fragment.WorkOutTimeFragment"
+            android:label="Fragment Work Out Time"
+            tools:layout="@layout/fragment_work_out_time">
+    </fragment>
+
+</navigation>

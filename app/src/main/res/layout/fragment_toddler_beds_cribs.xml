@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:padding="20dp" android:orientation="vertical">
+
+        <View android:layout_width="88.3dp" android:layout_height="1.7dp"
+              android:background="#1b7fff"
+              android:id="@+id/horizontalLine"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="21.2sp"
+                android:textColor="#1b7fff"
+                android:id="@+id/title"
+                android:textStyle="bold"
+                android:layout_marginBottom="51.3dp"
+                android:text="Toddler Beds Cribs"
+        />
+
+        <ImageView android:layout_width="300dp" android:layout_height="259dp"
+                   android:layout_gravity="center_horizontal"
+                   android:scaleType="fitXY"
+                   android:src="@drawable/toddler_beds_cribs_image1"/>
+
+    </LinearLayout>
+</ScrollView>

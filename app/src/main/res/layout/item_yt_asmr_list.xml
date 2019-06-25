@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:foreground="?attr/selectableItemBackground"
+             android:layout_marginBottom="13.7dp">
+
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="57dp"
+                   android:minWidth="101.3dp" android:src="@color/colorAccent"
+                   android:id="@+id/thumbnail" android:scaleType="centerInside"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13.2sp"
+                android:textColor="#333333"
+                android:text="ASMR #1"
+                android:id="@+id/title"
+                android:layout_toRightOf="@id/thumbnail"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="27dp"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/channel"
+                android:layout_height="wrap_content"
+                android:textSize="10.7sp"
+                android:textColor="#bbbbbb"
+                android:layout_alignLeft="@id/title" android:layout_below="@id/title"
+                android:text="youtuber 1"/>
+    </RelativeLayout>
+
+</FrameLayout>

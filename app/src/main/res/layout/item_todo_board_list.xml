@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="36.3dp"
+                android:layout_height="wrap_content">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profileImage"
+            android:src="@drawable/ex_profile_img"
+            android:layout_alignLeft="@id/boardImage"
+            android:scaleType="fitXY"
+            app:riv_corner_radius="10dp"
+            android:layout_marginBottom="21.3dp"
+            app:riv_border_width="0dp"
+            android:layout_marginRight="17.7dp"
+            app:riv_mutate_background="true"
+            android:layout_height="37.7dp"
+            android:layout_width="37.7dp"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:textColor="#242424"
+            android:layout_alignTop="@id/profileImage"
+            android:id="@+id/title"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/profileImage"
+            android:text="Title"
+            android:textStyle="bold"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="8sp"
+            android:textColor="#242424"
+            android:id="@+id/username"
+            android:layout_below="@id/title"
+            android:layout_toRightOf="@id/profileImage"
+            android:text="Daivid Randal"
+            android:textStyle="bold"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="7.5sp"
+            android:layout_alignRight="@id/boardImage"
+            android:layout_alignBottom="@id/profileImage"
+            android:textColor="#9f9f9f"
+            android:id="@+id/boardDate"
+            android:text="하루 전"/>
+
+    <com.makeramen.roundedimageview.RoundedImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/boardImage"
+            android:src="@drawable/ex_board_image"
+            android:scaleType="centerCrop"
+            android:layout_below="@id/profileImage"
+            app:riv_corner_radius="25dp"
+            app:riv_border_width="0dp"
+            app:riv_border_color="#333333"
+            app:riv_mutate_background="true"
+            android:layout_marginBottom="16.3dp"
+            app:riv_tile_mode="repeat"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_below="@id/boardImage"
+            android:id="@+id/content"
+            android:layout_marginBottom="16.3dp"
+            android:layout_alignLeft="@id/profileImage"
+            android:layout_alignRight="@id/boardImage"
+            android:textColor="#9f9f9f"
+            android:text="이 편지는 영국에서 최초로 시작되어 일년에 한 바퀴 돌면서
+받는 사람에게 행운을 주었고 지금은 당신에게로 옮겨진 이 편지는
+4일 안에 당신 곁을 떠나야 합니다. 이 편지를 포함해서 7통을 행운이
+필요한 사람에게 보내 주셔야 합니다. 복사를 해도 좋습니다.
+혹 미신이라 하실지 모르지만 사실입니다. 영국에서 HGXWCH
+이라는 사람은 1930년에 이 편지를 받았습니다.
+그는 비서에게 복사해서 보내라고 했습니다. 며칠 뒤에 복권이
+당첨되어 20억을 받았습니다. 어떤 이는 이 편지를..."
+    />
+
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_below="@id/content"
+                    android:id="@+id/likeArea"
+                    android:layout_alignLeft="@id/boardImage">
+
+        <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_like"
+                   android:id="@+id/unlikeBtn"/>
+
+        <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_unlike"
+                   android:id="@+id/likeBtn"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:id="@+id/like"
+                android:layout_marginTop="1dp"
+                android:layout_marginLeft="28dp"
+                android:textStyle="bold"
+                android:textColor="#242424"
+                android:text="293"/>
+    </RelativeLayout>
+
+</RelativeLayout>

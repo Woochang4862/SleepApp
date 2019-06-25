@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:background="@drawable/bg_add_work_out"
+                android:layout_height="match_parent">
+
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
+               android:src="@drawable/ic_arrow_back" android:id="@+id/backBtn" android:layout_margin="16dp"
+               android:contentDescription="backBtn"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:id="@+id/title"
+            android:layout_marginBottom="66.3dp"
+            android:layout_marginTop="74dp"
+            android:layout_marginLeft="61dp"
+            android:text="빈도"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:id="@+id/sunBtn"
+            android:layout_marginBottom="20dp"
+            android:layout_below="@id/title"
+            android:background="?attr/selectableItemBackground"
+            android:layout_alignLeft="@id/title"
+            android:layout_marginLeft="7.4dp"
+            android:textColor="#000000"
+            android:text="일요일"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:textSize="14sp"
+            android:id="@+id/monBtn"
+            android:layout_below="@id/sunBtn"
+            android:background="?attr/selectableItemBackground"
+            android:layout_alignLeft="@id/sunBtn"
+            android:textColor="#000000"
+            android:text="월요일"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:layout_marginBottom="20dp"
+            android:background="?attr/selectableItemBackground"
+            android:id="@+id/tueBtn"
+            android:layout_below="@id/monBtn"
+            android:layout_alignLeft="@id/sunBtn"
+            android:textColor="#000000"
+            android:text="화요일"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:id="@+id/wedBtn"
+            android:background="?attr/selectableItemBackground"
+            android:layout_below="@id/tueBtn"
+            android:layout_alignLeft="@id/sunBtn"
+            android:textColor="#000000"
+            android:layout_marginBottom="20dp"
+            android:text="수요일"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:textSize="14sp"
+            android:id="@+id/thuBtn"
+            android:layout_below="@id/wedBtn"
+            android:layout_alignLeft="@id/sunBtn"
+            android:textColor="#000000"
+            android:background="?attr/selectableItemBackground"
+            android:text="목요일"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:id="@+id/friBtn"
+            android:layout_below="@id/thuBtn"
+            android:layout_alignLeft="@id/sunBtn"
+            android:textColor="#000000"
+            android:layout_marginBottom="20dp"
+            android:background="?attr/selectableItemBackground"
+            android:text="금요일"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:id="@+id/satBtn"
+            android:layout_below="@id/friBtn"
+            android:layout_alignLeft="@id/sunBtn"
+            android:layout_marginBottom="28dp"
+            android:textColor="#000000"
+            android:background="?attr/selectableItemBackground"
+            android:text="토요일"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:id="@+id/next"
+            android:layout_below="@id/satBtn"
+            android:layout_marginLeft="134.7dp"
+            android:text="다음"/>
+</RelativeLayout>

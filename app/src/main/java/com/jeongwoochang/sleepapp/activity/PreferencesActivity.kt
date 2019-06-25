@@ -1,7 +1,7 @@
 package com.jeongwoochang.sleepapp.activity
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.jeongwoochang.sleepapp.fragment.PreferencesFragment
 
 class PreferencesActivity : AppCompatActivity() {

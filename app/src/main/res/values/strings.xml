@@ -1,17 +1,31 @@
 <resources>
     <string name="app_name">SleepApp</string>
 
+    <string name="select_day_of_week">중복 되는 요일을 고르세요</string>
+    <string name="wake_up">기상 시간</string>
+
+    <string name="sleep_schedule_hr">시간</string>
+    <string name="sleep_schedule_min">분</string>
+    <string name="bedtime">취침 시간</string>
+
+
     <string name="main_interval">%1$s minutes between alarms</string>
     <string name="interval_dialog_title">Enter interval between alarms:</string>
     <string name="all_minutes">분</string>
     <string name="number_dialog_title">Enter number of alarms:</string>
 
+    //commonPref
     <string name="preferences_title">설정</string>
     <string name="preferences_sleep_time_title">수면 시간 설정</string>
+    <string name="preferences_check_sleep_time_title">수면 시간 확인</string>
+    <string name="preferences_logout">로그아웃</string>
     <string name="preferences_duration_of_ringtone_title">알림음 지속 시간</string>
     <string name="preferences_ringtone_title">알림음 선택</string>
     <string name="preferences_default_ringtone_name">Default</string>
     <string name="preferences_default_duration">60초</string>
+    <string name="preferences_alarm_on_off_title">알람 켜기/끄기</string>
+    <string name="preferences_interval_title">알림 간격</string>
+    <string name="preferences_number_of_alarm_title">알림 횟수</string>
 
     <string name="main_alarm_turned_off_toast">All alarms turned off</string>
     <string name="main_alarm_turned_on_toast">All alarms turned on</string>
@@ -24,9 +38,41 @@
 
 
     <string name="chooseringtone_chooser_title">파일 선택</string>
+    <string name="number_of_todo_text">오늘 %d개의 과제가 있습니다.</string>
 
     <plurals name="main_number_of_alarms">
         <item quantity="one">%1$s alarm</item>
         <item quantity="other">%1$s alarms</item>
     </plurals>
+    <string name="title_activity_login">Sign in</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">로그인</string>
+    <string name="action_sign_up">회원가입</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email completions."</string>
+    <string name="prompt_username">Username</string>
+    <string name="description_small_single">길이 : 75” | 191 cm \n너비 : 30” | 76 cm \n면적 : 15.63 ft2 | 1.45 m2 \n추천 사용자 | 청소년 용,
+        좁은 손님방
+    </string>
+    <string name="description_california_king">길이 : 84” | 213 cm \n너비 : 72” | 183 cm \n면적 : 42 ft2 | 3.9 m2 \n추천 사용자 : 장신 사용자,
+        안방, 자녀가 두 명 이상 부부
+    </string>
+    <string name="description_full_single">길이 : 75” | 191 cm \n너비 : 54” | 137 cm \n면적 : 28.13 ft2 | 2.62 m2 \n추천 사용자 : 10~20
+        대, 사회 초년생, 손님방
+    </string>
+    <string name="description_king">길이 : 80” | 203 cm \n너비 : 76” | 193 cm \n면적 : 42.22 ft2 | 3.92 m2 \n추천사용자 : 3인 가족(부부 +
+        아이/반려 동물)
+    </string>
+    <string name="description_queen">길이 : 80” | 203 cm \n너비 : 60” | 152 cm \n면적 : 33.33 ft2 | 3.09 m2 \n추천 사용자 : 넉넉한 개인용, 부부,
+        넓은 소님방
+    </string>
+    <string name="description_twin_single">길이 (Twin) : 75” | 191 cm \n너비 (Twin, Twin XL) : 38” | 97 cm \n길이 (Twin XL) : 80”
+        | 203cm \n면적 : 19.79 ft2 | 1.85 m2 \n추천 사용자 : 큰 청소년, 자취생, 호텔
+    </string>
 </resources>

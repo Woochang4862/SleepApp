@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.FastActivity">
+
+    <EditText android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/fastTimeHour" android:minWidth="20dp"/>
+    <EditText android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/fastTimeMin" android:minWidth="20dp"
+    android:layout_toRightOf="@id/fastTimeHour"/>
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:id="@+id/saveBtn"
+            android:layout_below="@id/fastTimeMin" android:text="save"/>
+
+</RelativeLayout>

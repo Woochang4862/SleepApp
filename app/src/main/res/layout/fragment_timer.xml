@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:layout_width="wrap_content"
+                                                           android:id="@+id/swipeView"
+                                                           android:layout_height="wrap_content">
+        <!--Content-->
+        <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:id="@+id/content">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+
+                <!--ToolBar-->
+                <androidx.appcompat.widget.Toolbar android:layout_width="match_parent"
+                                                   android:id="@+id/toolbar"
+                                                   android:layout_height="wrap_content"
+                                                   app:contentInsetStart="0dp">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                                    android:padding="26.7dp">
+
+
+                        <!--<ImageView android:id="@+id/cameraBtn"
+                                   android:layout_alignTop="@id/username"
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:background="?attr/selectableItemBackgroundBorderless"
+                                   android:src="@drawable/ic_camera"
+                                   android:layout_marginBottom="10dp"
+                                   android:layout_alignParentRight="true"/>-->
+
+                        <ImageView android:id="@+id/settingBtn"
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:layout_alignParentRight="true"
+                                   android:layout_marginBottom="10dp"
+                                   android:background="?attr/selectableItemBackgroundBorderless"
+                                   android:src="@drawable/ic_settings"/>
+
+                        <!--<ImageView android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:id="@+id/refreshBtn"
+                                   android:layout_alignRight="@id/settingBtn"
+                                   android:background="?attr/selectableItemBackgroundBorderless"
+                                   android:src="@drawable/ic_refresh" android:layout_below="@id/settingBtn"/>-->
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="33.8sp"
+                                android:textColor="#000000"
+                                android:id="@+id/username"
+                                android:textStyle="bold"
+                                android:text="000"/>
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="33.8sp"
+                                android:layout_alignTop="@id/username"
+                                android:textColor="#000000"
+                                android:layout_toRightOf="@id/username"
+                                android:text=" 님"/>
+                        <!--<TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="33.8sp"
+                                android:textColor="#000000"
+                                android:layout_below="@id/username"
+                                android:layout_marginBottom="62dp"
+                                android:layout_alignLeft="@id/username"
+                                android:text="피로도"/>-->
+                    </RelativeLayout>
+
+                </androidx.appcompat.widget.Toolbar>
+
+                <ImageView android:layout_width="match_parent" android:layout_height="wrap_content"
+                           android:src="@drawable/perfect_illustration"
+                           android:layout_marginLeft="47dp"
+                           android:layout_marginRight="61dp"
+                           android:layout_marginBottom="117dp"
+                           android:layout_below="@id/toolbar"
+                           android:id="@+id/illustration"/>
+
+                <TextView
+                        android:id="@+id/currDate"
+                        android:layout_below="@id/illustration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="10.8sp"
+                        android:textColor="#b5b5b5"
+                        android:layout_marginLeft="31.3dp"
+                        android:text="20 MAY 2019"
+                        android:layout_marginBottom="8.7dp"/>
+
+                <TextView
+                        android:id="@+id/timerTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/currDate"
+                        android:textSize="27.7sp"
+                        android:layout_below="@id/currDate"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="54.3dp"
+                        android:text="타이머"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="19.7sp"
+                        android:textColor="#000000"
+                        android:layout_marginBottom="51.3dp"
+                        android:layout_below="@id/timerTitle"
+                        android:id="@+id/fastTitle"
+                        android:textStyle="bold"
+                        android:layout_alignLeft="@id/currDate"
+                        android:layout_marginLeft="3.7dp"
+                        android:text="금식"/>
+
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                              android:id="@+id/fastTimeArea"
+                              android:layout_below="@id/fastTitle" android:background="?attr/selectableItemBackground"
+                              android:paddingLeft="10dp" android:paddingRight="10dp"
+                              android:layout_centerHorizontal="true"
+                              android:orientation="horizontal"
+                              android:layout_marginBottom="40dp">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="23.2sp"
+                            android:textColor="#000000"
+                            android:text="잠 자기"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="43.3sp"
+                            android:textColor="#4168d6"
+                            android:layout_below="@id/fastTitle"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:layout_centerHorizontal="true"
+                            android:textStyle="bold"
+                            android:id="@+id/fastTimerHour"
+                            android:text="1"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="23.2sp"
+                            android:textColor="#000000"
+                            android:text="시간"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="43.3sp"
+                            android:textColor="#4168d6"
+                            android:layout_below="@id/fastTitle"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:layout_centerHorizontal="true"
+                            android:textStyle="bold"
+                            android:id="@+id/fastTimerMinute"
+                            android:text="00"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="23.2sp"
+                            android:textColor="#000000"
+                            android:text="분 전"/>
+
+                </LinearLayout>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="23.3sp"
+                        android:textColor="#b9b9b9"
+                        android:id="@+id/fastStartTime"
+                        android:layout_marginBottom="75dp"
+                        android:layout_below="@id/fastTimeArea"
+                        android:text="= 23시 00분"
+                        android:layout_alignLeft="@id/fastTimeArea"/>
+
+                <androidx.recyclerview.widget.RecyclerView android:layout_width="match_parent"
+                                                           android:layout_height="wrap_content"
+                                                           android:layout_alignLeft="@id/fastTitle"
+                                                           android:layout_marginBottom="20.3dp"
+                                                           android:layout_below="@id/fastStartTime"
+                                                           android:id="@+id/fastAchievementList"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/achievementTitle"
+                        android:textSize="19.7sp"
+                        android:layout_below="@id/fastAchievementList"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="79.7dp"
+                        android:layout_alignLeft="@id/fastTitle"
+                        android:text="실천도"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="71.7sp"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/achievementTitle"
+                        android:layout_marginBottom="114dp"
+                        android:id="@+id/achievementRating"
+                        android:text="75"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="44.7sp"
+                        android:textColor="#000000"
+                        android:layout_toRightOf="@id/achievementRating"
+                        android:layout_alignBottom="@id/achievementRating"
+                        android:layout_marginBottom="10dp"
+                        android:text="%"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/napTitle"
+                        android:textSize="19.7sp"
+                        android:textStyle="bold"
+                        android:layout_below="@id/achievementRating"
+                        android:layout_marginBottom="65.3dp"
+                        android:layout_alignLeft="@id/fastTitle"
+                        android:textColor="#000000"
+                        android:text="낮잠"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="43.3sp"
+                        android:textColor="#616161"
+                        android:layout_centerHorizontal="true"
+                        android:background="?attr/selectableItemBackground"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textStyle="bold"
+                        android:id="@+id/napTimer"
+                        android:layout_below="@id/napTitle"
+                        android:layout_marginBottom="75dp"
+                        android:text="01:00:00"/>
+
+                <!--Player-->
+                <ImageView android:id="@+id/pauseBtn" android:layout_width="wrap_content"
+                           android:layout_height="wrap_content" android:src="@drawable/ic_pause"
+                           android:padding="10dp"
+                           android:background="?attr/selectableItemBackgroundBorderless"
+                           android:layout_below="@id/napTimer" android:layout_alignLeft="@id/napTimer"/>
+                <ImageView android:id="@+id/playBtn" android:layout_width="wrap_content"
+                           android:layout_height="wrap_content" android:src="@drawable/ic_play"
+                           android:padding="10dp"
+                           android:background="?attr/selectableItemBackgroundBorderless"
+                           android:layout_below="@id/napTimer" android:layout_centerHorizontal="true"/>
+                <ImageView android:id="@+id/stopBtn" android:layout_width="wrap_content"
+                           android:layout_height="wrap_content" android:src="@drawable/ic_stop"
+                           android:background="?attr/selectableItemBackgroundBorderless"
+                           android:padding="10dp"
+                           android:layout_below="@id/napTimer" android:layout_alignRight="@id/napTimer"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="122.3dp"
+                        android:layout_marginBottom="15.7dp"
+                        android:textSize="14.3sp"
+                        android:id="@+id/nowMonth"
+                        android:layout_marginLeft="13.3dp"
+                        android:layout_below="@id/pauseBtn"
+                        android:textColor="#bababa"
+                        android:text="MAY"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="122.3dp"
+                        android:layout_marginBottom="15.7dp"
+                        android:textSize="14.3sp"
+                        android:id="@+id/arBtn"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="13.3dp"
+                        android:layout_below="@id/pauseBtn"
+                        android:textColor="#bababa"
+                        android:text="AR로 보기"/>
+
+                <com.github.mikephil.charting.charts.LineChart android:layout_width="match_parent"
+                                                               android:layout_height="240dp"
+                                                               android:layout_below="@id/nowMonth"
+                                                               android:id="@+id/napChart"/>
+            </RelativeLayout>
+        </ScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</RelativeLayout>

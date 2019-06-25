@@ -8,27 +8,31 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="AppTheme.Sub" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/almost_black</item>
+        <item name="colorPrimaryDark">@color/slate</item>
+        <item name="colorAccent">@color/daySelected</item>
+    </style>
+    
     <style name="AppFullScreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowActionBar">false</item>
         <item name="android:windowNoTitle">true</item>
     </style>
 
+    <style name="AppTheme.AddTODO" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">#826aff</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="PreferenceScreen" parent="AppTheme">
+        <item name="android:textColor">#C74040</item>
+    </style>
+
     <style name="TimePickerDialogTheme" parent="@style/Theme.AppCompat.Light.Dialog">
         <item name="colorAccent">@color/colorPrimary</item> <!-- colorAccent here seems to work just fine? -->
-        <!--<item name="android:timePickerStyle">@style/TimePickerStyle</item>-->
-
-
-
-        <!--<item name="showTitle">true</item>-->
-        <!--<item name="colorAccent">@color/colorAccent</item>-->
-        <!--<item name="colorAccent">@color/white</item>-->
-        <!--<item name="android:headerBackground">#ffee6073</item>-->
-        <!--<item name="android:numbersTextColor">#ff000000</item>-->
-        <!--<item name="android:numbersSelectorColor">#ff2d6073</item>-->
-        <!--<item name="android:numbersBackgroundColor">#ffdddd00</item>-->
-        <!--<item name="android:colorPrimary">#ff2d0073</item>-->
-        <!--<item name="android:colorPrimaryDark">#ff2d60ff</item>-->
-        <!--<item name="android:headerTimeTextAppearance">@style/TimePickerDialogTheme.TimeLabel</item> &lt;!&ndash; TimePicker Time *TextAppearance* &ndash;&gt;-->
     </style>
 
     <style name="TimePickerStyle" parent="@android:style/Widget.Material.Light.TimePicker">
@@ -49,4 +53,5 @@
         <item name="android:textColor">@color/colorPrimary</item>
 
     </style>
+    <color name="tabLayoutIconSelected">#fa5f5f</color>
 </resources>

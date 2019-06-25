@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="23.5sp"
+            android:textColor="#494949"
+            android:id="@+id/helloText"
+            android:textStyle="bold"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20.7dp"
+            android:text="안녕하세요,"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="23.5sp"
+            android:textColor="#494949"
+            android:textStyle="bold"
+            android:id="@+id/userName"
+            android:layout_marginBottom="25.3dp"
+            android:layout_below="@id/helloText"
+            android:layout_alignLeft="@id/helloText"
+            android:text="000 님!"/>
+
+    <com.makeramen.roundedimageview.RoundedImageView android:layout_width="32.3dp" android:layout_height="32.3dp"
+                                                     android:layout_alignParentRight="true"
+                                                     android:layout_marginRight="17dp"
+                                                     app:riv_corner_radius="10dp"
+                                                     android:scaleType="fitXY"
+                                                     android:layout_marginTop="17dp"
+                                                     android:src="@drawable/ex_profile_img"
+                                                     android:id="@+id/profileImg"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="11.5sp"
+            android:textColor="#494949"
+            android:textStyle="bold"
+            android:id="@+id/numberOfTODO"
+            android:layout_below="@id/userName"
+            android:layout_alignLeft="@id/helloText"
+            android:text="@string/number_of_todo_text"/>
+
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
+               android:id="@+id/addBtn" android:src="@drawable/ic_add" android:layout_alignParentRight="true"
+               android:background="?attr/selectableItemBackgroundBorderless"
+               android:layout_alignBottom="@id/numberOfTODO" android:layout_marginRight="20dp"/>
+
+    <com.github.jhonnyx2012.horizontalpicker.HorizontalPicker android:layout_width="match_parent"
+                                                              android:layout_height="wrap_content"
+                                                              android:id="@+id/datePicker"
+                                                              android:layout_marginBottom="31.3dp"
+                                                              android:layout_below="@id/numberOfTODO"/>
+
+    <androidx.cardview.widget.CardView
+            android:orientation="vertical"
+            android:layout_width="203.7dp"
+            android:layout_below="@id/datePicker"
+            android:layout_centerHorizontal="true"
+            app:cardCornerRadius="20dp"
+            android:id="@+id/todoListArea"
+            android:background="@drawable/todo_rounded_border"
+            android:foreground="?attr/selectableItemBackground"
+            android:layout_height="261.7dp"
+    >
+
+
+        <androidx.recyclerview.widget.RecyclerView android:layout_width="wrap_content"
+                                                   android:layout_marginLeft="25dp"
+                                                   android:layout_marginTop="25dp"
+                                                   android:layout_height="wrap_content"
+                                                   android:id="@+id/todoList"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView android:layout_width="134.4dp" android:layout_height="27.7dp"
+                                       android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"
+                                       android:layout_marginBottom="19.7dp"
+                                       app:cardCornerRadius="13.8dp"
+                                       app:cardElevation="0dp"
+                                       android:id="@+id/shareBtn" android:foreground="?attr/selectableItemBackground">
+        <ImageView android:layout_width="match_parent" android:layout_height="match_parent"
+                   android:background="@drawable/rounded_share_button" android:alpha="0.24"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="11.2sp"
+                android:textColor="#826aff"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:text="게시판으로 이동"
+        />
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

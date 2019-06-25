@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:padding="20dp" android:orientation="vertical">
+
+        <View android:layout_width="88.3dp" android:layout_height="1.7dp"
+              android:background="#1b7fff"
+              android:id="@+id/horizontalLine"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="21.2sp"
+                android:textColor="#1b7fff"
+                android:id="@+id/title"
+                android:textStyle="bold"
+                android:layout_marginBottom="51.3dp"
+                android:text="Full Single"
+        />
+
+        <ImageView android:layout_width="264dp" android:layout_height="442dp"
+                   android:layout_gravity="center_horizontal"
+                   android:src="@drawable/illustration_full_double"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12.5sp"
+                android:textColor="#1b7fff"
+                android:layout_marginBottom="80dp"
+                android:lineSpacingExtra="2.2sp"
+                android:text="@string/description_full_single"
+        />
+
+        <ImageView android:layout_width="287dp" android:layout_height="253dp"
+                   android:scaleType="fitXY"
+                   android:layout_gravity="center_horizontal"
+                   android:src="@drawable/full_single_image1"/>
+    </LinearLayout>
+</ScrollView>
