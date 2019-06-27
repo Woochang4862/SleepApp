@@ -8,6 +8,7 @@ import com.jeongwoochang.sleepapp.R
 import org.joda.time.DateTime
 import org.joda.time.DateTimeZone
 import org.joda.time.format.DateTimeFormat
+import timber.log.Timber
 import java.util.*
 import java.util.concurrent.TimeUnit
 
@@ -24,6 +25,9 @@ class SharedPreferencesHelper(private val context: Context) {
     private val EMAIL: String
     private val PW: String
     private val AUTO_LOGIN: String
+    private val MILLIS_LEFT: String
+    private val TIMER_RUNNING: String
+    private val END_TIME: String
     //etc
     private val INSTALLATION_DATE: String
 
@@ -91,6 +95,27 @@ class SharedPreferencesHelper(private val context: Context) {
             editor.putBoolean(AUTO_LOGIN, value)
             editor.apply()
         }
+    var millisLeft:Long
+    get() = preferences.getLong(MILLIS_LEFT, napTimer)
+    set(value) {
+        val editor = preferences.edit()
+        editor.putLong(MILLIS_LEFT, value)
+        editor.apply()
+    }
+    var timerRunning:Boolean
+    get() = preferences.getBoolean(TIMER_RUNNING, false)
+    set(value) {
+        val editor = preferences.edit()
+        editor.putBoolean(TIMER_RUNNING, value)
+        editor.apply()
+    }
+    var endTime:Long
+    get() = preferences.getLong(END_TIME, 0)
+    set(value) {
+        val editor = preferences.edit()
+        editor.putLong(END_TIME, value)
+        editor.apply()
+    }
     //etc
     private
     val installationDate: Long
@@ -99,7 +124,7 @@ class SharedPreferencesHelper(private val context: Context) {
             if (preferences.contains(INSTALLATION_DATE)) {
                 return preferences.getLong(INSTALLATION_DATE, defaultInstallationDate)
             } else {
-                Log.d(LOG_TAG, "INSTALLATION_DATE not found")
+                Timber.tag(LOG_TAG).d("INSTALLATION_DATE not found")
                 setInstallationDate()
                 return defaultInstallationDate
             }
@@ -109,7 +134,7 @@ class SharedPreferencesHelper(private val context: Context) {
             val currentDateMillis = Calendar.getInstance().timeInMillis
             val installationDateMillis = installationDate
             val diffDays = TimeUnit.DAYS.convert(currentDateMillis - installationDateMillis, TimeUnit.MILLISECONDS)
-            Log.d(LOG_TAG, "Days since installation: $diffDays")
+            Timber.tag(LOG_TAG).d("Days since installation: $diffDays")
             return diffDays
         }
 
@@ -120,6 +145,9 @@ class SharedPreferencesHelper(private val context: Context) {
         EMAIL = context.resources.getString(R.string.key_email)
         PW = context.resources.getString(R.string.key_pw)
         AUTO_LOGIN = context.resources.getString(R.string.key_auto_login)
+        MILLIS_LEFT = context.resources.getString(R.string.key_millis_left)
+        TIMER_RUNNING = context.resources.getString(R.string.key_timer_running)
+        END_TIME = context.resources.getString(R.string.key_end_time)
         //etc
         INSTALLATION_DATE = context.resources.getString(R.string.key_installation_date)
 

@@ -28,6 +28,7 @@ import kotlinx.android.synthetic.main.activity_login.password
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import timber.log.Timber
 import java.util.*
 
 /**
@@ -158,22 +159,37 @@ class LoginActivity : AppCompatActivity(), LoaderCallbacks<Cursor> {
         val service = APIClient.getClient(this).create(APIInterface::class.java)
         service.login(email.text.toString(), password.text.toString()).enqueue(object : Callback<LoginRes> {
             override fun onFailure(call: Call<LoginRes>, t: Throwable) {
-
+                t.printStackTrace()
+                Toast.makeText(this@LoginActivity, "로그인에 실패했습니다", Toast.LENGTH_SHORT).show()
             }
 
             override fun onResponse(call: Call<LoginRes>, response: Response<LoginRes>) {
-                if (response.body()!!.isStatus) {
-                    if (autoLogin.isChecked) {
-                        val prf = SharedPreferencesHelper(this@LoginActivity)
-                        prf.email = (response.body() as LoginRes).id
-                        prf.pw = password.text.toString()
-                        prf.autoLogin = true
+                Timber.tag("OkHttp").d(response.body().toString())
+                Timber.tag("OkHttp").d(response.code().toString())
+                service.status().enqueue(object : Callback<LoginRes> {
+                    override fun onFailure(call: Call<LoginRes>, t: Throwable) {
+                        t.printStackTrace()
+                        Toast.makeText(this@LoginActivity, "로그인에 실패했습니다", Toast.LENGTH_SHORT).show()
                     }
-                    startActivity(Intent(applicationContext, MainActivity::class.java))
-                    finish()
-                } else {
-                    Toast.makeText(this@LoginActivity, "로그인에 실패했습니다", Toast.LENGTH_SHORT).show()
-                }
+
+                    override fun onResponse(call: Call<LoginRes>, response: Response<LoginRes>) {
+                        Timber.tag("OkHttp").d(response.body().toString())
+                        Timber.tag("OkHttp").d(response.code().toString())
+                        if (response.body()!!.isStatus) {
+                            val prf = SharedPreferencesHelper(this@LoginActivity)
+                            prf.email = (response.body() as LoginRes).id
+                            if (autoLogin.isChecked) {
+                                prf.pw = password.text.toString()
+                                prf.autoLogin = true
+                            }
+                            startActivity(Intent(applicationContext, MainActivity::class.java))
+                            finish()
+                        } else {
+                            Toast.makeText(this@LoginActivity, "로그인에 실패했습니다", Toast.LENGTH_SHORT).show()
+                        }
+                    }
+
+                })
             }
         })
     }

@@ -57,6 +57,8 @@ class TimerFragment : Fragment() {
 
     private var mTimeLeftInMillis: Long = 0L
 
+    private var mEndTime = 0L
+
     private lateinit var viewOfLayout: View
 
     companion object {
@@ -223,7 +225,7 @@ class TimerFragment : Fragment() {
         setData(values)
         viewOfLayout.napChart.invalidate()
         viewOfLayout.arBtn.setOnClickListener {
-            val i =Intent(activity, ARActivity::class.java)
+            val i = Intent(activity, ARActivity::class.java)
             val v = ArrayList<Double>()
             DBAdapter.connect(context)
             dbAdapter.napTimes.forEach {
@@ -310,6 +312,7 @@ class TimerFragment : Fragment() {
     }
 
     private fun startTimer() {
+        mEndTime = System.currentTimeMillis() + mTimeLeftInMillis;
         viewOfLayout.napTimer.isEnabled = false
         countDownTimer = object : CountDownTimer(mTimeLeftInMillis, 1000) {
             override fun onTick(millisUntilFinished: Long) {
@@ -357,5 +360,68 @@ class TimerFragment : Fragment() {
         viewOfLayout.playBtn.alpha = 1f
         viewOfLayout.stopBtn.isEnabled = true
         viewOfLayout.stopBtn.alpha = 1f
+    }
+
+    override fun onStart() {
+        super.onStart()
+        mTimeLeftInMillis = prf.millisLeft
+        isTimerRunning = prf.timerRunning
+
+        updateCountDownText()
+        if (isTimerRunning) { // 카운팅 중
+            viewOfLayout.playBtn.isEnabled = false
+            viewOfLayout.playBtn.alpha = 0.3f
+            viewOfLayout.pauseBtn.isEnabled = true
+            viewOfLayout.pauseBtn.alpha = 1f
+            viewOfLayout.stopBtn.isEnabled = false
+            viewOfLayout.stopBtn.alpha = 0.3f
+        } else {
+            if (mTimeLeftInMillis > 0) { //일시정지
+                viewOfLayout.pauseBtn.isEnabled = false
+                viewOfLayout.pauseBtn.alpha = 0.3f
+                viewOfLayout.playBtn.isEnabled = true
+                viewOfLayout.playBtn.alpha = 1f
+                viewOfLayout.stopBtn.isEnabled = true
+                viewOfLayout.stopBtn.alpha = 1f
+            } else { //완전 처음
+                viewOfLayout.pauseBtn.isEnabled = false
+                viewOfLayout.pauseBtn.alpha = 0.3f
+                viewOfLayout.stopBtn.isEnabled = false
+                viewOfLayout.stopBtn.alpha = 0.3f
+                viewOfLayout.playBtn.isEnabled = true
+                viewOfLayout.playBtn.alpha = 1f
+            }
+        }
+
+        if (isTimerRunning) {
+            mEndTime = prf.endTime
+            mTimeLeftInMillis = mEndTime - System.currentTimeMillis()
+
+            if (mTimeLeftInMillis < 0) {
+                mTimeLeftInMillis = 0
+                isTimerRunning = false
+                updateCountDownText()
+                viewOfLayout.pauseBtn.isEnabled = false
+                viewOfLayout.pauseBtn.alpha = 0.3f
+                viewOfLayout.stopBtn.isEnabled = false
+                viewOfLayout.stopBtn.alpha = 0.3f
+                viewOfLayout.playBtn.isEnabled = true
+                viewOfLayout.playBtn.alpha = 1f
+            } else {
+                startTimer()
+            }
+        }
+    }
+
+    override fun onStop() {
+        super.onStop()
+
+        prf.millisLeft =  mTimeLeftInMillis
+        prf.timerRunning = isTimerRunning
+        prf.endTime = mEndTime
+
+        if (countDownTimer != null) {
+            countDownTimer!!.cancel()
+        }
     }
 }

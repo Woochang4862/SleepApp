@@ -75,4 +75,7 @@
     <string name="description_twin_single">길이 (Twin) : 75” | 191 cm \n너비 (Twin, Twin XL) : 38” | 97 cm \n길이 (Twin XL) : 80”
         | 203cm \n면적 : 19.79 ft2 | 1.85 m2 \n추천 사용자 : 큰 청소년, 자취생, 호텔
     </string>
+    <string name="key_millis_left">millis_left</string>
+    <string name="key_timer_running">timer_running</string>
+    <string name="key_end_time">end_time</string>
 </resources>

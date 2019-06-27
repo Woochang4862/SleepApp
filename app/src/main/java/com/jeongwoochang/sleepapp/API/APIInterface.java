@@ -16,6 +16,9 @@ public interface APIInterface {
     @POST("/login")
     Call<LoginRes> login(@Query(value = "id", encoded = true) String id, @Query(value = "pw", encoded = true) String pw);
 
+    @GET("/status")
+    Call<LoginRes> status();
+
     @Multipart
     @POST("/writeboard")
     Call<LoginRes> writeBoard(@PartMap HashMap<String, RequestBody> boardParm);

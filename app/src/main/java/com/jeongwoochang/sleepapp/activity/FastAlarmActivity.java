@@ -63,6 +63,7 @@ public class FastAlarmActivity extends AppCompatActivity implements RingtonePlay
         successBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ringtonePlayer.stop();
                 DBAdapter dbAdapter = DBAdapter.getInstance();
                 DBAdapter.connect(FastAlarmActivity.this);
                 DateTime d = new DateTime().minusDays(1).withHourOfDay(0).withMinuteOfHour(0).withSecondOfMinute(0).withMillisOfSecond(0);
@@ -75,7 +76,7 @@ public class FastAlarmActivity extends AppCompatActivity implements RingtonePlay
             @Override
             public void onClick(View view) {
                 ringtonePlayer.stop();
-                if(getIntent().getBooleanExtra("isStart", false)){
+                if (getIntent().getBooleanExtra("isStart", false)) {
                     DBAdapter dbAdapter = DBAdapter.getInstance();
                     DBAdapter.connect(FastAlarmActivity.this);
                     DateTime d = new DateTime().minusDays(1).withHourOfDay(0).withMinuteOfHour(0).withSecondOfMinute(0).withMillisOfSecond(0);

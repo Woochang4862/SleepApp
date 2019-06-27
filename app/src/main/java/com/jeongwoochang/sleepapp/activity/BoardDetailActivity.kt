@@ -51,7 +51,6 @@ class BoardDetailActivity : AppCompatActivity() {
         if (position == -1) {
             execption()
         }
-        Toast.makeText(this, data.title, Toast.LENGTH_SHORT).show()
         val pd = KProgressHUD.create(this)
             .setStyle(KProgressHUD.Style.SPIN_INDETERMINATE)
             .setLabel("Please wait")
@@ -127,7 +126,14 @@ class BoardDetailActivity : AppCompatActivity() {
         if (likes != null) {
             like.text = likes.size.toString()
         }
-
+        val likeIsClicked = likes.contains(SharedPreferencesHelper(this).email)
+        if (likeIsClicked) {
+            unlikeBtn.visibility = View.VISIBLE
+            likeBtn.visibility = View.GONE
+        } else {
+            unlikeBtn.visibility = View.GONE
+            likeBtn.visibility = View.VISIBLE
+        }
         likeArea.setOnClickListener {
             service.boards.enqueue(object : Callback<BoardRes> {
                 override fun onResponse(call: Call<BoardRes>, response: Response<BoardRes>) {
